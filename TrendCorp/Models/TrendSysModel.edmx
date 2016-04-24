@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TrendsysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PaPr">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BarCode" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="PartNo" Type="varchar" MaxLength="30" />
+          <Property Name="Descr" Type="varchar" MaxLength="150" />
+          <Property Name="DescrCN" Type="varchar" MaxLength="300" />
+          <Property Name="PicFileName" Type="varchar" MaxLength="50" />
+          <Property Name="CPartNo" Type="varchar" MaxLength="16" />
+          <Property Name="Species" Type="varchar" MaxLength="20" />
+          <Property Name="ISize" Type="varchar" MaxLength="20" />
+          <Property Name="ColorKind" Type="varchar" MaxLength="100" />
+          <Property Name="Plating" Type="varchar" MaxLength="50" />
+          <Property Name="Material" Type="varchar" MaxLength="20" />
+          <Property Name="IShape" Type="varchar" MaxLength="20" />
+          <Property Name="MaterialExp" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="StoneCode" Type="varchar" MaxLength="16" />
+          <Property Name="StoneSize" Type="varchar" MaxLength="20" />
+          <Property Name="StoneShape" Type="varchar" MaxLength="16" />
+          <Property Name="StoneQtys" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="WasteRate" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="HumanExp" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="CostZm" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="CostPg" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="CostDd" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="LevelZm" Type="varchar" MaxLength="6" />
+          <Property Name="IUnit" Type="varchar" MaxLength="20" />
+          <Property Name="CurrencySymbol" Type="varchar" MaxLength="10" />
+          <Property Name="UnitPrice" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Weight" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="WeightMemo" Type="varchar" MaxLength="10" />
+          <Property Name="INote" Type="varchar" MaxLength="60" />
+          <Property Name="EditMemo" Type="ntext" />
+          <Property Name="ModelNo" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CheckPriceDt" Type="datetime" />
+          <Property Name="SilverWeight" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="EditDateDd" Type="datetime" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CreateEmployeeCode" Type="varchar" MaxLength="10" />
+          <Property Name="EditEmployeeCode" Type="varchar" MaxLength="10" />
+          <Property Name="MadeSupply" Type="varchar" MaxLength="30" />
+          <Property Name="SilverLoss" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="SettingCost" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="PolishingCost" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="MountingCost" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="PlatingCost" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="StoneCost" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="TotalProngs" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="LoppingCost" Type="numeric" Precision="10" Scale="3" />
+          <Property Name="CostST" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostPA" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostDM" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostXS" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostNS" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostSH" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostOT" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CostRemark" Type="varchar" MaxLength="80" />
+          <Property Name="CostCrDate" Type="datetime" />
+          <Property Name="CostEdDate" Type="datetime" />
+          <Property Name="CostCrEmpCode" Type="varchar" MaxLength="10" />
+          <Property Name="CostEdEmpCode" Type="varchar" MaxLength="10" />
+          <Property Name="CostPrice" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="WeightCS" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="WeightPA" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="WeightST" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="CreatePriceDt" Type="datetime" />
+          <Property Name="UnitPrice08" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="NoMemo" Type="ntext" />
+          <Property Name="CheckDate" Type="datetime" />
+          <Property Name="CheckEmployeeCode" Type="varchar" MaxLength="10" />
+          <Property Name="Checked" Type="bit" />
+          <Property Name="WorkPriceZM" Type="numeric" Precision="9" Scale="4" />
+          <Property Name="WorkPricePG" Type="numeric" Precision="9" Scale="4" />
+          <Property Name="WorkPriceCheckDt" Type="datetime" />
+          <Property Name="QuNoZm" Type="varchar" MaxLength="20" />
+          <Property Name="QuNoPg" Type="varchar" MaxLength="20" />
+          <Property Name="SetNo1" Type="varchar" MaxLength="30" />
+          <Property Name="SetNo2" Type="varchar" MaxLength="30" />
+          <Property Name="SetNo3" Type="varchar" MaxLength="30" />
+          <Property Name="NeedNewPic" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="TrendsysModelStoreContainer">
+          <EntitySet Name="PaPr" EntityType="Self.PaPr" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TrendsysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PaPr">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BarCode" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PartNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Descr" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DescrCN" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="PicFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CPartNo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="Species" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ISize" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ColorKind" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Plating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Material" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IShape" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MaterialExp" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="StoneCode" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="StoneSize" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StoneShape" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="StoneQtys" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="WasteRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HumanExp" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="CostZm" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="CostPg" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="CostDd" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="LevelZm" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="IUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CurrencySymbol" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Weight" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="WeightMemo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="INote" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="EditMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ModelNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CheckPriceDt" Type="DateTime" Precision="3" />
+          <Property Name="SilverWeight" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="EditDateDd" Type="DateTime" Precision="3" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateEmployeeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EditEmployeeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MadeSupply" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SilverLoss" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="SettingCost" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="PolishingCost" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="MountingCost" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="PlatingCost" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="StoneCost" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="TotalProngs" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="LoppingCost" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="CostST" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostPA" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostDM" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostXS" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostNS" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostSH" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostOT" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CostRemark" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CostCrDate" Type="DateTime" Precision="3" />
+          <Property Name="CostEdDate" Type="DateTime" Precision="3" />
+          <Property Name="CostCrEmpCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CostEdEmpCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CostPrice" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WeightCS" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WeightPA" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WeightST" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="CreatePriceDt" Type="DateTime" Precision="3" />
+          <Property Name="UnitPrice08" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="NoMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CheckDate" Type="DateTime" Precision="3" />
+          <Property Name="CheckEmployeeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Checked" Type="Boolean" />
+          <Property Name="WorkPriceZM" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WorkPricePG" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="WorkPriceCheckDt" Type="DateTime" Precision="3" />
+          <Property Name="QuNoZm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="QuNoPg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SetNo1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SetNo2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SetNo3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NeedNewPic" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="TrendsysEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PaPrs" EntityType="Self.PaPr" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TrendsysModelStoreContainer" CdmEntityContainer="TrendsysEntities">
+          <EntitySetMapping Name="PaPrs">
+            <EntityTypeMapping TypeName="TrendsysModel.PaPr">
+              <MappingFragment StoreEntitySet="PaPr">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="Descr" ColumnName="Descr" />
+                <ScalarProperty Name="DescrCN" ColumnName="DescrCN" />
+                <ScalarProperty Name="PicFileName" ColumnName="PicFileName" />
+                <ScalarProperty Name="CPartNo" ColumnName="CPartNo" />
+                <ScalarProperty Name="Species" ColumnName="Species" />
+                <ScalarProperty Name="ISize" ColumnName="ISize" />
+                <ScalarProperty Name="ColorKind" ColumnName="ColorKind" />
+                <ScalarProperty Name="Plating" ColumnName="Plating" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="IShape" ColumnName="IShape" />
+                <ScalarProperty Name="MaterialExp" ColumnName="MaterialExp" />
+                <ScalarProperty Name="StoneCode" ColumnName="StoneCode" />
+                <ScalarProperty Name="StoneSize" ColumnName="StoneSize" />
+                <ScalarProperty Name="StoneShape" ColumnName="StoneShape" />
+                <ScalarProperty Name="StoneQtys" ColumnName="StoneQtys" />
+                <ScalarProperty Name="WasteRate" ColumnName="WasteRate" />
+                <ScalarProperty Name="HumanExp" ColumnName="HumanExp" />
+                <ScalarProperty Name="CostZm" ColumnName="CostZm" />
+                <ScalarProperty Name="CostPg" ColumnName="CostPg" />
+                <ScalarProperty Name="CostDd" ColumnName="CostDd" />
+                <ScalarProperty Name="LevelZm" ColumnName="LevelZm" />
+                <ScalarProperty Name="IUnit" ColumnName="IUnit" />
+                <ScalarProperty Name="CurrencySymbol" ColumnName="CurrencySymbol" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="WeightMemo" ColumnName="WeightMemo" />
+                <ScalarProperty Name="INote" ColumnName="INote" />
+                <ScalarProperty Name="EditMemo" ColumnName="EditMemo" />
+                <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CheckPriceDt" ColumnName="CheckPriceDt" />
+                <ScalarProperty Name="SilverWeight" ColumnName="SilverWeight" />
+                <ScalarProperty Name="EditDateDd" ColumnName="EditDateDd" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="CreateEmployeeCode" ColumnName="CreateEmployeeCode" />
+                <ScalarProperty Name="EditEmployeeCode" ColumnName="EditEmployeeCode" />
+                <ScalarProperty Name="MadeSupply" ColumnName="MadeSupply" />
+                <ScalarProperty Name="SilverLoss" ColumnName="SilverLoss" />
+                <ScalarProperty Name="SettingCost" ColumnName="SettingCost" />
+                <ScalarProperty Name="PolishingCost" ColumnName="PolishingCost" />
+                <ScalarProperty Name="MountingCost" ColumnName="MountingCost" />
+                <ScalarProperty Name="PlatingCost" ColumnName="PlatingCost" />
+                <ScalarProperty Name="StoneCost" ColumnName="StoneCost" />
+                <ScalarProperty Name="TotalProngs" ColumnName="TotalProngs" />
+                <ScalarProperty Name="LoppingCost" ColumnName="LoppingCost" />
+                <ScalarProperty Name="CostST" ColumnName="CostST" />
+                <ScalarProperty Name="CostPA" ColumnName="CostPA" />
+                <ScalarProperty Name="CostDM" ColumnName="CostDM" />
+                <ScalarProperty Name="CostXS" ColumnName="CostXS" />
+                <ScalarProperty Name="CostNS" ColumnName="CostNS" />
+                <ScalarProperty Name="CostSH" ColumnName="CostSH" />
+                <ScalarProperty Name="CostOT" ColumnName="CostOT" />
+                <ScalarProperty Name="CostRemark" ColumnName="CostRemark" />
+                <ScalarProperty Name="CostCrDate" ColumnName="CostCrDate" />
+                <ScalarProperty Name="CostEdDate" ColumnName="CostEdDate" />
+                <ScalarProperty Name="CostCrEmpCode" ColumnName="CostCrEmpCode" />
+                <ScalarProperty Name="CostEdEmpCode" ColumnName="CostEdEmpCode" />
+                <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+                <ScalarProperty Name="WeightCS" ColumnName="WeightCS" />
+                <ScalarProperty Name="WeightPA" ColumnName="WeightPA" />
+                <ScalarProperty Name="WeightST" ColumnName="WeightST" />
+                <ScalarProperty Name="CreatePriceDt" ColumnName="CreatePriceDt" />
+                <ScalarProperty Name="UnitPrice08" ColumnName="UnitPrice08" />
+                <ScalarProperty Name="NoMemo" ColumnName="NoMemo" />
+                <ScalarProperty Name="CheckDate" ColumnName="CheckDate" />
+                <ScalarProperty Name="CheckEmployeeCode" ColumnName="CheckEmployeeCode" />
+                <ScalarProperty Name="Checked" ColumnName="Checked" />
+                <ScalarProperty Name="WorkPriceZM" ColumnName="WorkPriceZM" />
+                <ScalarProperty Name="WorkPricePG" ColumnName="WorkPricePG" />
+                <ScalarProperty Name="WorkPriceCheckDt" ColumnName="WorkPriceCheckDt" />
+                <ScalarProperty Name="QuNoZm" ColumnName="QuNoZm" />
+                <ScalarProperty Name="QuNoPg" ColumnName="QuNoPg" />
+                <ScalarProperty Name="SetNo1" ColumnName="SetNo1" />
+                <ScalarProperty Name="SetNo2" ColumnName="SetNo2" />
+                <ScalarProperty Name="SetNo3" ColumnName="SetNo3" />
+                <ScalarProperty Name="NeedNewPic" ColumnName="NeedNewPic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

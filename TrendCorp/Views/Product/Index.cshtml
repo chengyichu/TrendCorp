@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TrendCorp.Models.PaPr>
+
+@{
+    ViewBag.Title = "Products";
+}
+<br/>
+<script type="text/html" id="productListTemplate">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+               @* <img data-src="authorPicture" data-alt="author" />*@
+                Image Here
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        Bar Code
+                    </div>
+                    <div class="col-md-8" data-content="BarCode">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        Item Number
+                    </div>
+                    <div class="col-md-8" data-content="PartNo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        Description
+                    </div>
+                    <div class="col-md-8" data-content="Descr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</script>
+<form name="frmProduct" id="frmProduct">
+    Enter Barcode: <input type="text" id="txtBarcode" autofocus /> <input type="submit" id="btnBarcode" value="GO"/>
+    <br/>
+    <hr/>
+    <script>
+        function getProductInfo(barcode) {
+
+            $.ajax({
+                type: "GET",
+                url: "/Product/GetProduct/" + barcode,
+                contextType: "application/json",
+                success: function (response) {
+                    if (response.hasOwnProperty("status") && response.status == false) {
+                        $(txtBarcode).val("").focus();
+                        return;
+                    }
+
+                    var itemId = "item_" + response.BarCode;
+                    var newAddedItemElement = $("<div id='"+itemId+"'></div>");
+                    $("#outterContainer").append(newAddedItemElement);
+                    $(newAddedItemElement).loadTemplate($("#productListTemplate"), {
+                        BarCode: response.BarCode,
+                        PartNo: response.PartNo,
+                        Descr: response.Descr
+                    })
+                   // alert("got it.")
+                    $(txtBarcode).val("").focus();
+                }
+            })
+        }
+
+
+        $(document).ready(function () {
+
+            $(frmProduct).submit(function (e) {
+                getProductInfo($(txtBarcode).val().trim());
+                return false;
+            })
+        });
+    </script>
+    <div class="container-fluid" id="outterContainer">
+
+
+    </div>
+
+</form>
