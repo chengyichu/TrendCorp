@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TrendsysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TrendsysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="PaPr">
           <Key>
             <PropertyRef Name="ID" />
@@ -88,12 +88,16 @@
           <Property Name="SetNo2" Type="varchar" MaxLength="30" />
           <Property Name="SetNo3" Type="varchar" MaxLength="30" />
           <Property Name="NeedNewPic" Type="bit" />
+          <Property Name="BarCodeS1" Type="varchar" MaxLength="16" />
+          <Property Name="BarCodeS2" Type="varchar" MaxLength="16" />
+          <Property Name="BarCodeS3" Type="varchar" MaxLength="16" />
+          <Property Name="GoldWeight" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Descr2" Type="text" />
         </EntityType>
         <EntityContainer Name="TrendsysModelStoreContainer">
           <EntitySet Name="PaPr" EntityType="Self.PaPr" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TrendsysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -180,6 +184,11 @@
           <Property Name="SetNo2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="SetNo3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="NeedNewPic" Type="Boolean" />
+          <Property Name="BarCodeS1" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="BarCodeS2" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="BarCodeS3" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="GoldWeight" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Descr2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="TrendsysEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="PaPrs" EntityType="Self.PaPr" />
@@ -193,6 +202,11 @@
           <EntitySetMapping Name="PaPrs">
             <EntityTypeMapping TypeName="TrendsysModel.PaPr">
               <MappingFragment StoreEntitySet="PaPr">
+                <ScalarProperty Name="Descr2" ColumnName="Descr2" />
+                <ScalarProperty Name="GoldWeight" ColumnName="GoldWeight" />
+                <ScalarProperty Name="BarCodeS3" ColumnName="BarCodeS3" />
+                <ScalarProperty Name="BarCodeS2" ColumnName="BarCodeS2" />
+                <ScalarProperty Name="BarCodeS1" ColumnName="BarCodeS1" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="BarCode" ColumnName="BarCode" />
                 <ScalarProperty Name="PartNo" ColumnName="PartNo" />

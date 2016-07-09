@@ -93,5 +93,10 @@ namespace TrendCorp.Models
         public string SetNo2 { get; set; }
         public string SetNo3 { get; set; }
         public Nullable<bool> NeedNewPic { get; set; }
+        public string BarCodeS1 { get; set; }
+        public string BarCodeS2 { get; set; }
+        public string BarCodeS3 { get; set; }
+        public Nullable<decimal> GoldWeight { get; set; }
+        public string Descr2 { get; set; }
     }
 }

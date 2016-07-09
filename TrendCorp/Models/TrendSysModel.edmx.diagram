@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="124885f7f51147bca53896a93700d507" Name="Diagram1" ZoomLevel="26">
+      <Diagram DiagramId="124885f7f51147bca53896a93700d507" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="TrendsysModel.PaPr" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

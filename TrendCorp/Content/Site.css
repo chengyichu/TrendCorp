@@ -33,3 +33,7 @@ a.logo {
     margin-top:5px;
     text-indent: -9999px; /* hides the link text */
 }
+
+.col-title{
+    color: firebrick;
+}
