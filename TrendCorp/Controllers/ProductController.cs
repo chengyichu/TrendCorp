@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -20,14 +21,45 @@ namespace TrendCorp.Controllers
             return View(db.PaPrs.Take(50).ToList());
         }
 
+        private string GetProductPicturePath(PaPr product)
+        {
+            var fileExtension = "." + System.Configuration.ConfigurationManager.AppSettings["PicExtend"];
+            var fileName = !string.IsNullOrEmpty(product.PicFileName) ? product.PicFileName : product.PartNo;
+            var path1 = System.Configuration.ConfigurationManager.AppSettings["PicPath1"] + fileName.Substring(0,2) + "-/"+ fileName.Substring(0, 3) + "/" + fileName + fileExtension;
+            var path2 = System.Configuration.ConfigurationManager.AppSettings["PicPath2"] + fileName.Substring(0, 2) + "-/" + fileName.Substring(0, 3) + "/" + fileName + fileExtension;
+            var path3 = System.Configuration.ConfigurationManager.AppSettings["PicPath3"] + fileName.Substring(0, 2) + "-/" + fileName.Substring(0, 3) + "/" + fileName + fileExtension;
+
+            if (System.IO.File.Exists(HttpContext.Server.MapPath(path1))) {
+                return path1;
+            }
+            else if (System.IO.File.Exists(HttpContext.Server.MapPath(path2))) {
+                return path2;
+            }
+            else if (System.IO.File.Exists(HttpContext.Server.MapPath(path3))) {
+                return path3;
+            }
+            else
+            {
+                return null;
+            }
+            
+        }
         public JsonResult GetProduct(string barcode)
         {
             var product = db.PaPrs.FirstOrDefault(i => i.BarCode == barcode);
+            
             if (product == null)
             {
                 return Json(new { status = false, message = "Can't find the product." }, JsonRequestBehavior.AllowGet);
             }
-            return Json(product, JsonRequestBehavior.AllowGet);
+
+            var picturePath = GetProductPicturePath(product);
+            var productVm = new ProductVm
+            {
+                ImagePath = GetProductPicturePath(product),
+                Product = product
+            };
+            return Json(productVm, JsonRequestBehavior.AllowGet);
         }
 
 

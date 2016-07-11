@@ -10,7 +10,7 @@
             <div class="col-md-3">
                @* <img data-src="authorPicture" data-alt="author" />*@
                 
-                <img src="/Images/sample.jpg" height="100px;" />
+                <img data-src="ImagePath" height="100px;" />
             </div>
             <div class="col-md-9">
                 <div class="row">
@@ -57,13 +57,14 @@
                         return;
                     }
 
-                    var itemId = "item_" + response.BarCode;
+                    var itemId = "item_" + response.Product.BarCode;
                     var newAddedItemElement = $("<div id='"+itemId+"'></div>");
                     $("#outterContainer").append(newAddedItemElement);
                     $(newAddedItemElement).loadTemplate($("#productListTemplate"), {
-                        BarCode: response.BarCode,
-                        PartNo: response.PartNo,
-                        Descr: response.Descr
+                        BarCode: response.Product.BarCode,
+                        PartNo: response.Product.PartNo,
+                        Descr: response.Product.Descr,
+                        ImagePath: response.ImagePath,
                     })
                    // alert("got it.")
                     $(txtBarcode).val("").focus();

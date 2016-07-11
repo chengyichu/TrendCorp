@@ -184,6 +184,7 @@
     <Compile Include="Models\PaPr.cs">
       <DependentUpon>TrendSysModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductVm.cs" />
     <Compile Include="Models\TrendSysModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
